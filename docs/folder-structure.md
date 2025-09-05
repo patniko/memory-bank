@@ -6,7 +6,18 @@ This document defines the organizational structure for this projects knowledge b
 
 The documentation is organized into domain-specific folders, each managed by one or more entities that are responsible for keeping the content useful and easy to understand for readers. This structure enables efficient agent coordination and maintains clear separation of concerns.
 
-## Folder Structure
+## Rules
+Always follow {
+    For features always capture architecture changes, features and tasks. When you complete all tasks move the document to a completed folder under tasks and any feature files related to it under a completed folder in the features folder.
+
+    To learn more about the project and its document structure refer to folder-structure.md and important-conventions.md
+
+    Always update .gitignore if there are files or folders added to the repo that should not be committed
+
+    Create or update a quick-reference document with critical instructions for developers making code changes to this project if there is information that will speed up other feature implementations
+}
+
+## Rough Folder Structure 
 
 ```
 docs/
@@ -15,7 +26,7 @@ docs/
 │   ├── application-scope.md
 │   ├── project-goals.md
 │   └── roadmap.md
-├── features/               # Feature specifications. Updated when new features are planned or implemented
+├── features/               # Feature specifications. Updated when new features are planned or implemented. 
 │   ├── specifications.md
 │   └── requirements.md
 ├── standards/              # Technical standards. Updated when big coding standards or implementations are added
@@ -38,69 +49,28 @@ docs/
 ├── issues/                # Problem tracking. Updated when common issues are identified with no solution or a solution that has been identifed. Files are removed when a common problem or correction is removed.
 │   ├── common-problems.md
 │   └── corrections.md
-└── tasks/                 # Task management. Updated right before an agent begins working on a feature. Used to track steps and reqiurements for a feature so work can be tracked while features are being implemented. 1 file per feature.
+└── tasks/                 # Task management. Updated right before an agent begins working on a feature. Used to track steps and reqiurements for a feature so work can be tracked while features are being implemented. 1 file per feature. Always create files right before execution to track execution of the plan!
     ├── feature-implementation-tasks.md
     └── completed-feature-implementation-tasks.md
 
 ```
 
-## File Naming Conventions
-
-- Use lowercase with hyphens: `file-name.md`
-- Be descriptive and specific: `auth-standards.md` not `auth.md`
-- Include version dates for major updates: `api-v2-2024.md`
-- Use consistent prefixes for related files: `perf-optimization.md`, `perf-benchmarks.md`
-
-## Content Guidelines
-
-### File Size Limits
-- Maximum 1500 lines per file
-- Split large documents into logical sections
-- Use cross-references between related files
-
-### Format Standards
-- Use Markdown format (.md)
-- Include clear headings and table of contents
-- Use consistent formatting across all documents
-- Include last updated dates and change logs
-
-### Cross-References
-- Link related documents using relative paths
-- Maintain bidirectional references where appropriate
-- Use consistent link text and formatting
-
 ## Agent Coordination
 
-### File Ownership
-- Each file has a primary agent responsible for maintenance
-- Secondary agents can suggest changes through the consensus process
-- All changes require human approval before committing
+When planning to update files {
+    ### File Ownership
+    - Each file has a primary agent responsible for maintenance
+    - Secondary agents can suggest changes through the consensus process
+    - All changes require human approval before committing
 
-### Update Triggers
-- Code changes in relevant areas trigger agent analysis
-- Agents propose updates based on their domain expertise
-- Multi-agent verification ensures consistency
+    ### Update Triggers
+    - Code changes in relevant areas trigger agent analysis
+    - Agents propose updates based on their domain expertise
+    - Multi-agent verification ensures consistency
 
-### Conflict Resolution
-- Standards have override authority for technical consistency
-- Vision has override authority for strategic alignment
-- Security and performance have authority over vision and standards
-- Human review required for unresolved conflicts
-
-## Maintenance
-
-### Regular Reviews
-- Monthly review of folder structure effectiveness
-- Quarterly assessment of agent performance
-- Annual reorganization if needed
-
-### Quality Metrics
-- Documentation coverage of codebase
-- Agent suggestion accuracy rates
-- Human approval/rejection ratios
-- Cross-reference integrity
-
-### Evolution
-- Structure adapts based on project growth
-- New agents can be added with corresponding folders
-- Deprecated areas can be archived or removed
+    ### Conflict Resolution
+    - Standards have override authority for technical consistency
+    - Vision has override authority for strategic alignment
+    - Security and performance have authority over vision and standards
+    - Human review required for unresolved conflicts
+}
