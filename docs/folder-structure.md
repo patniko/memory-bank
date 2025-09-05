@@ -6,22 +6,10 @@ This document defines the organizational structure for this projects knowledge b
 
 The documentation is organized into domain-specific folders, each managed by one or more entities that are responsible for keeping the content useful and easy to understand for readers. This structure enables efficient agent coordination and maintains clear separation of concerns.
 
-## Rules
-Always follow {
-    For features always capture architecture changes, features and tasks. When you complete all tasks move the document to a completed folder under tasks and any feature files related to it under a completed folder in the features folder.
-
-    To learn more about the project and its document structure refer to folder-structure.md and important-conventions.md
-
-    Always update .gitignore if there are files or folders added to the repo that should not be committed
-
-    Create or update a quick-reference document with critical instructions for developers making code changes to this project if there is information that will speed up other feature implementations
-}
-
 ## Rough Folder Structure 
 
 ```
 docs/
-├── agent-guidance/           # Agent specific guidance that is helpful
 ├── vision/                 # Strategic direction
 │   ├── application-scope.md
 │   ├── project-goals.md
