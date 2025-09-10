@@ -1,0 +1,22 @@
+{
+  "name": "memory-bank-pacman",
+  "version": "1.0.0",
+  "description": "High-quality, mobile-responsive Pacman game for the memory-bank repository",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "serve": "python3 -m http.server 8000",
+    "start": "npm run build && npm run serve"
+  },
+  "keywords": ["pacman", "game", "typescript", "canvas", "mobile"],
+  "author": "Memory Bank Agent",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
